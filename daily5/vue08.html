@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <style>
+        /* .class1{
+            background: #444;
+            color: red;
+        }
+        .class2{
+            background: yellow;
+            color: green;
+        } */
+    </style>
+</head>
+<body>
+    <div id="app">
+      {{5+5}}<br>
+      {{ok?'YES':'NO'}}<br>
+      {{message.split('').reverse().join('')}}
+      <div v-bind:id="'list-'+id">数据转化</div>
+    </div>
+    <script>
+      new Vue({
+          el:'#app',
+          data:{
+              ok:true,
+              message:'RUNOOB',
+              id:1
+          }
+      })
+
+    </script>
+</body>
+</html>

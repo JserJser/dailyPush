@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>圆进度条</title>
+</head>
+<body>
+    <canvas id="yuan" width="200" height="200"></canvas>
+</body>
+<script src="jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+    window.chart =function(ID){
+        var canvas = document.getElementById(ID);
+        var ctx = canvas.getContext("2d");
+        // 画布宽高
+        var W = canvas.width;
+        var H = canvas.height;
+         //度角
+         var degrees = 0;
+         var new_degrees = 0;
+         // 差额
+         var difference = 0;
+         var text,text_w;                   // 文字
+         var R =W < H ? W:H;             //先默认环半径为canvas宽度
+         var outW =parseInt(R / 14);        //环宽度
+         var outR = (R/2) -outW;           //环半径=canvas宽度半径 -外环宽度
+         var $this = this;
+         console.log("canvas宽度:"+R);
+         console.log(outW);
+         console.log(outR);
+
+         $this.ratePieNoAnimation = function (number){
+             degrees =360*number/100;
+
+             // 园弧底图
+             ctx.clearRect(0,0,W,H);//先清画布
+             ctx.beginPath();
+             ctx.strokeStyle ="blue";
+            // 园弧线的宽度
+             ctx.lineWidth = outW;
+             ctx.arc(W / 2, H / 2, outR, 0, Math.PI * 2, false);
+             ctx.stroke();
+
+            //圆弧动画
+            var r = degrees * Math.PI / 180;
+            ctx.beginPath();
+            ctx.strokeStyle = "#994746";
+            ctx.lineWidth = outW;
+            // 弧将从最顶端开始
+            ctx.arc(W / 2, H / 2, outR, 0 - 90 * Math.PI / 180, r - 90 * Math.PI / 180, false);
+            ctx.stroke();
+
+
+            // 文字添加
+            ctx.fillStyle = "#63d2ef";
+            ctx.shadowColor = "#eee";
+            ctx.font = "bold " + R / 6 + "px hanyi";
+            text = Math.floor(degrees / 360 * 100) + "%";
+            text_w = ctx.measureText(text).width;
+            ctx.fillText(text, W / 2 - text_w / 2, H / 2 + R / 10);
+        };
+
+        $this.ratePie = function(number){
+            var i=0;
+            var time=setInterval(function(){
+                if( i==number){
+                    clearInterval(time);
+                }else{
+                    number >0 ? i++ : i--;
+                }
+                $this.ratePieNoAnimation(i);
+                if( i>100 || i<-100){
+                    $this.ratePieNoAnimation(number);
+                    clearInterval(time);
+                }
+            }, 2000 / (number > 0 ? number : -number));
+        };
+
+    }
+
+    new chart("yuan").ratePie(50);
+</script>
+</html>

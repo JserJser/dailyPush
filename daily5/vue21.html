@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+       <ol>
+         <li v-for="(value,key) in object">
+            {{index}}.{{key}}:{{value}}
+         </li>
+       </ol>
+    </div>
+    <script>
+      new Vue({
+          el:'#app',
+         data:{
+             object:{
+                 name:'新闻标题',
+                 url:'新闻链接',
+                 author:'新闻作者'
+             }
+         }
+      })
+
+    </script>
+</body>
+</html>

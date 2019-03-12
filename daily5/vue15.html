@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <style>
+        /* .class1{
+            background: #444;
+            color: red;
+        }
+        .class2{
+            background: yellow;
+            color: green;
+        } */
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div v-if="type==='A'">
+            A
+        </div>
+        <div v-else-if="type==='B'">
+            B
+        </div>
+        <div v-else-if="type==='C'">
+            C
+        </div>
+        <div v-else>
+            Not A/B/C
+        </div>
+
+    <!-- <button v-on:click="reverseMessage">反转字符串</button> -->
+    </div>
+    <script>
+      new Vue({
+          el:'#app',
+          type:'c'
+      })
+
+    </script>
+</body>
+</html>

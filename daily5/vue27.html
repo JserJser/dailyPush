@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+     <p style="font-size: 25px;">计数器:{{counter}}</p>
+     <button @click="counter++" style="font-size:25px">点我</button>
+    </div>
+    <script>
+      var vm=new Vue({
+          el:'#app',
+          data:{
+              counter:1
+          }
+      })
+     wm.$watch('counter',function(nval,oval){
+         alert('计数器值的变化'+oval+'!')
+     })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <style>
+        .class1{
+            background: #444;
+            color: red;
+        }
+        .class2{
+            background: yellow;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+      <label for="r1">修改颜色</label>
+      <input type="checkbox" v-model="use" id="r1">
+      <br><br>
+      <div v-bind:class="{'class1':use,'class2':action}">
+        v-bind:class命令
+      </div>
+    </div>
+    <script>
+      new Vue({
+          el:'#app',
+          data:{
+              use:true,
+              action:false
+          }
+      })
+
+    </script>
+</body>
+</html>

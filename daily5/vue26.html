@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+       <p>原始字符串：{{site}}</p>
+    </div>
+    <script>
+      var vm=new Vue({
+          el:'#app',
+          data:{
+              name:'新闻标题',
+              url:'www.baidu.com'
+          },
+          computed:{
+            site:{
+                get:function(){
+                    return this.name+''+this.url
+                },
+                set:function(newValue){
+                    var names=newValue.split('')
+                    this.name=names[0]
+                    this.url=names[names.length-1]
+                }
+            }
+          }
+      })
+      vm.site='什么什么www.google.com';
+      document.write('name'+vm.name);
+      document.write('<br>');
+      document.write('url'+vm.url);
+
+    </script>
+</body>
+</html>

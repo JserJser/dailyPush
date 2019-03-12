@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <style>
+        /* .class1{
+            background: #444;
+            color: red;
+        }
+        .class2{
+            background: yellow;
+            color: green;
+        } */
+    </style>
+</head>
+<body>
+    <div id="app">
+    <p>{{message|capitalize}}</p>
+    <a v-bind:href="url"></a>
+    <a :href="url"></a>
+    <a v-on:click="doSomething"></a>
+    <a @click="doSomething"></a>
+
+    <!-- <button v-on:click="reverseMessage">反转字符串</button> -->
+    </div>
+    <script>
+      new Vue({
+          el:'#app',
+          data:{
+             message:'http://www.baidu.com'
+          },
+         filters:{
+             capitalize:function(value){
+                 if(!value)return ''
+                 value=value.toString()
+                 return value.charAt(0).toUpperCase()+value.slice(1)
+             }
+         }
+      })
+
+    </script>
+</body>
+</html>

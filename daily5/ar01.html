@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <script>
+        window.onload=function(){
+            let vm=new Vue({
+                el:'#itany',
+                data:{
+                    msg:'welcome to itany'
+                },
+                methods:{
+                    update(){
+                        this.msg='欢迎来到aaa'
+                    },
+                    destory(){
+                        vm.$destory();
+                    }
+                },
+                beforeCreate(){
+                    alert("组件实例刚刚创建，还未进行数据观测和事件配置");
+                },
+                created(){
+                    alert("实例已经创建完成，并且进行数据观测和事件配置");
+                },
+              beforeMount(){
+                  alert('模版编译之前还没有挂载');
+              },
+              mounted(){
+                  alert('模版编译之后，已经挂载，此时才会渲染页面');
+              },
+              beforeUpdate(){
+                  alert('组件更新之前');
+              },
+              updated(){
+                  alert("组件更新之后");
+              },
+              beforeDestory(){
+                  alert("组件销毁之前");
+              },
+              destoryed(){
+                  alert('组件销毁之后');
+              }
+            })
+        }    
+    </script>
+    <div id="itany">
+        {{msg}}
+        <br>
+        <button @click="update">更新数据</button>
+        <button @click="destory">销毁数据</button>
+    </div>
+</body>
+</html>

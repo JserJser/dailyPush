@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <style>
+        .base{
+            width:100px;
+            height: 100px;
+        }
+        .active{
+            background: green;
+        }
+        .text-danger{
+            background: red;
+        }
+    </style>
+</head>
+<body>
+   <div id="app">
+       <div class="static" v-bind:class="classObject"></div>
+   </div>
+   <script>
+   new Vue({
+       el:'#app',
+      data:{
+          isActive:true,
+        error:{
+            value:true,
+            type:'fatal'
+        },
+        computed:{
+            classObject:function(){
+                return {
+                    base:true,
+                    active:this.isActive&&!this.error.value,
+                    'text-danger':this.error.value&&this.error.type==='fatal'
+                }
+            }
+        },
+        computed:{
+            classObject:function(){
+                return {
+                    base:true,
+                    active:this.isActive&&!this.error.value,
+                    'text-danger':this.error.value&&this.error.type==='fatal'
+                }
+            }
+        },
+        data:{
+            isActive:true,
+            error:{
+                value:true,
+                type:'fatal'
+            }
+        },
+        computed:{
+            classObject:function(){
+                return{
+                    base:true,
+                    active:this.isActive&&!this.error.value,
+                    'text-danger':this.error.value&&this.error.type==='fatal'
+                }
+            }
+        }
+      }
+   })
+   </script>
+</body>
+</html>

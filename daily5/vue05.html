@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="vue_det">
+        <h1>site:{{site}}</h1>
+        <h1>url:{{url}}</h1>
+        <h1>Alexa:{{alexa}}</h1>
+        <!-- <h1>{{details()}}</h1> -->
+    </div>
+    <script>
+        var data={site:"新闻郑州景区门票降价", url:"www.baidu.com",alexa:10000}
+       var vm=new Vue({
+           el:"#vue_det",
+            data:data
+       })
+      document.write(vm.$data===data);//true
+      document.write("<br>");
+      document.write(vm.$el===document.getElementById("vue_det"))
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算属性</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="itany">
+       <input type="text" v-model="name">
+       <h3>{{name}}</h3>
+       <hr>
+       <input type="text" v-model="age">
+       <h3>{{age}}</h3>
+       <hr>
+       <input type="text" v-model="user.name">
+       <h3>{{user.name}}</h3>
+       
+
+    </div>
+
+
+    <script>
+        var vm=new Vue({
+            el:'#itany',
+            data:{
+                name:'tom',
+                age:123,
+                user:{
+                    id:1001,
+                    name:'ttt'
+                }
+            },
+            watch:{
+                age:(newValue,oldValue)=>{
+                    console.log('agechange'+oldValue+'新值'+newValue);
+                },
+                user:{
+                    handler:(newValue,oldValue)=>{
+                        console.log('user被修改'+oldValue.name+'新值'+newValue.name)
+                    },
+                    deep:true//深度监视，当对象中的属性发生变化时也会监视
+                }
+            }
+            
+        });
+
+       
+    </script>
+    
+
+</body>
+</html>
