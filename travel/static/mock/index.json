@@ -1,0 +1,108 @@
+{
+    "ret":true,
+    "data":{
+        "swiperList": [{
+            "id": "001",
+            "imgUrl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/d7bbc21db442366a882e04ddc984669a.jpg_750x200_85e640d9.jpg"
+          }, {
+            "id": "002",
+            "imgUrl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20196/5e02c14d35097f40d656f455837b63eb.jpg_750x200_adebb937.jpg"
+          }],
+          "iconList": [{
+            "id": "003",
+            "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+            "desc": "景点门票"
+          }, {
+            "id": "004",
+            "imgUrl": "http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png",
+            "desc": "深圳必游"
+          }, {
+            "id": "005",
+            "imgUrl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/cba147cf6cfcea7109d0bff6aac6f626.png",
+            "desc": "深圳动物园"
+          }, {
+            "id":" 006",
+            "imgUrl":" http://img1.qunarzz.com/piao/fusion/1803/a6/6d97515091789602.png",
+            "desc":" 世界之窗"
+          }, {
+           " id": "007",
+            "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/b6/37560ece9c62b502.png",
+            "desc": "东部华侨城"
+          }, {
+            "id": "008",
+            "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/a6/6d97515091789602.png",
+            "desc": "世界之窗"
+          },
+          {
+            "id":" 009",
+           " imgUrl": "http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png",
+           "desc":"深圳必游"
+          } ],
+          "recommendList": [
+            {
+                "id": "001",
+              "imgUrl": "https://cdn.11bee.com/large_product_pic/0908_ZJ5301QZ5302_large_product_abbreviatedPic.jpg",
+              "title": "百年康惠保重疾",
+              "desc": "直击市场底价 保障130种高发疾病"
+            },
+            {
+                "id": "002",
+                "imgUrl": "https://cdn.11bee.com/large_product_pic/0908_ZJ5301QZ5302_large_product_abbreviatedPic.jpg",
+                "title": "百年康惠保重疾",
+                "desc": "直击市场底价 保障130种高发疾病"
+            },
+            {
+                "id": "003",
+                "imgUrl": "https://cdn.11bee.com/large_product_pic/0908_ZJ5301QZ5302_large_product_abbreviatedPic.jpg",
+                "title": "百年康惠保重疾",
+                "desc": "直击市场底价 保障130种高发疾病"
+            },
+            {
+                "id": "004",
+                "imgUrl": "https://cdn.11bee.com/large_product_pic/0908_ZJ5301QZ5302_large_product_abbreviatedPic.jpg",
+                "title": "百年康惠保重疾",
+                "desc": "直击市场底价 保障130种高发疾病"
+            },
+            {
+                "id": "005",
+                "imgUrl": "https://cdn.11bee.com/large_product_pic/0908_ZJ5301QZ5302_large_product_abbreviatedPic.jpg",
+                "title": "百年康惠保重疾",
+                "desc": "直击市场底价 保障130种高发疾病"
+            }
+            
+          ],
+          "weekendList": [
+            {
+             "id": "001",
+                "imgUrl": "http://img1.qunarzz.com/sight/source/1811/15/66f14e0fd6fbb.jpg_r_640x214_5d69f21d.jpg",
+             "title": "百年康惠保重疾",
+              "desc": "直击市场底价 保障130种高发疾病"
+            },
+            {
+            "id": "002",
+                "imgUrl": "http://img1.qunarzz.com/sight/source/1811/15/66f14e0fd6fbb.jpg_r_640x214_5d69f21d.jpg",
+            "title": "百年康惠保重疾",
+                "desc": "直击市场底价 保障130种高发疾病"
+            },
+            {
+            "id": "003",
+                "imgUrl": "http://img1.qunarzz.com/sight/source/1811/15/66f14e0fd6fbb.jpg_r_640x214_5d69f21d.jpg",
+            "title": "百年康惠保重疾",
+                "desc": "直击市场底价 保障130种高发疾病"
+            },
+            {
+            "id": "004",
+                "imgUrl": "http://img1.qunarzz.com/sight/source/1811/15/66f14e0fd6fbb.jpg_r_640x214_5d69f21d.jpg",
+            "title": "百年康惠保重疾",
+                "desc": "直击市场底价 保障130种高发疾病"
+            },  {
+            "id": "005",
+                "imgUrl": "http://img1.qunarzz.com/sight/source/1811/15/66f14e0fd6fbb.jpg_r_640x214_5d69f21d.jpg",
+            "title": "百年康惠保重疾",
+                "desc": "直击市场底价 保障130种高发疾病"
+            }
+        ]
+
+
+    }
+}
