@@ -1,0 +1,18 @@
+{
+  "name": "firstwebpackdemo",
+  "version": "1.0.0",
+  "description": "webpack01",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --output-filename=bundle.js --mode=development"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "jser_dimple",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
+  }
+}
